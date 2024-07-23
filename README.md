@@ -1,2 +1,18 @@
-# CM-COMPILER
-Welcome to the Complete Compiler Front End in C++. This project, based on a simple compiler model, includes lexical analysis, syntax analysis, and intermediate code generation. The C++ implementation covers packages for main, lexer, symbol, parser, and inter, transforming source code into an abstract syntax tree and generating three-address code.
+// File Main.cpp
+#include <iostream>
+#include "lexer.h"
+#include "parser.h"
+
+using namespace std;
+
+int main() {
+    try {
+        Lexer lex;
+        Parser parse(lex);
+        parse.program();
+        cout << endl;
+    } catch (const exception &e) {
+        cerr << "Exception: " << e.what() << endl;
+    }
+    return 0;
+}
