@@ -1,11 +1,3 @@
-Project Overview
-The C++ code for the translator consists of five key components:
+The C++ translator code is designed with five essential components that work together to create an efficient compiler front end. The **main** function controls the overall execution flow, while the **lexer** performs lexical analysis, breaking the source code down into a stream of tokens. The **symbol** component is responsible for managing the symbol table, which keeps track of variables, functions, and other identifiers. The **parser** then takes over, conducting syntactic analysis to transform these tokens into a syntax tree. Finally, the **inter** component contains classes that represent language constructs within the abstract syntax tree (AST). These classes are key to building syntax-tree nodes, ensuring proper type-checking, and generating three-address intermediate code.
 
-main: Handles the execution flow.
-lexer: Performs lexical analysis.
-symbol: Manages the symbol table.
-parser: Conducts syntactic analysis.
-inter: Contains classes for language constructs in the abstract syntax tree (AST).
-The source program is initially parsed into a stream of tokens and then transformed into a syntax tree with constructs or nodes implemented as objects. These objects are responsible for constructing syntax-tree nodes, checking types, and generating three-address intermediate code.
-
-Explore the code and understand how each component interacts to create a robust and efficient compiler front end in C++.
+As you explore the code, you'll see how each of these components interacts to form a cohesive system. The lexer breaks down the code, the parser structures it, and the inter component helps turn that structure into something that can be understood by the rest of the compiler. Together, these elements create a solid foundation for a compiler that efficiently processes and analyzes input code.
