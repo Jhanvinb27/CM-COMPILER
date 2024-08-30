@@ -165,5 +165,3 @@ public:
         return tok;
     }
 };
-
-int Lexer::line = 1;
